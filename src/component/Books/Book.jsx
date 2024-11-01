@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Book = ({book}) => {
-    const {bookName,author,image,category,tags,rating} = book
+    const {bookName,author,image,category,tags,rating,bookId} = book
     return (
         <div>
-            <div className="card bg-base-100 w-96 p-6 border font-normalfont ">
+           <Link to={`/books/${bookId}`}>
+           <div className="card bg-base-100 w-96 p-6 border font-normalfont ">
   <figure className="px-5 py-10 rounded-xl bg-slate-300">
     <img 
    
@@ -25,11 +27,16 @@ const Book = ({book}) => {
     <div className='border-b-2 border-dotted'></div>
     <div className='flex justify-between mt-6'>
         <p>{category}</p>
-        <p className='text-right'>{rating}</p>
+        <p className='text-right flex justify-end gap-3 items-center'><span className='text-xl'>{rating}</span> <div className="rating">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  
+ 
+</div></p>
        
     </div>
   </div>
 </div>
+           </Link>
         </div>
     );
 };

@@ -11,6 +11,7 @@ const Books = () => {
         .then(data=> setbooks(data))
     },[])
     return (
+        <>
         <div className='w-11/12 mx-auto mt-12'>
             <h1 className='text-3xl font-bold font-stylefont text-center my-6'>Books</h1>
            <div className='grid grid-cols-3 gap-6'>
@@ -20,6 +21,7 @@ const Books = () => {
            </div>
             
         </div>
+        </>
     );
 };
 
