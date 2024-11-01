@@ -9,6 +9,10 @@ export default {
       colors: {
         btn1:'#23BE0A',
         btn2:'#59C6D2'
+      },
+      fontFamily: {
+        normalfont:"Work Sans",
+        stylefont:"Playfair Display"
       }
     },
   },
