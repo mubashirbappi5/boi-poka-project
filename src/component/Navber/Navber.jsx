@@ -1,6 +1,12 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navber = () => {
+    const links = <>
+    <NavLink className="btn btn-ghost"  to="/">Home</NavLink>
+    <NavLink className="btn btn-ghost" to={"listed-book"}>Listed Books</NavLink>
+   <NavLink className="btn btn-ghost" to={"pages-to-read"}>Pages to Read</NavLink>
+    </>
     return (
         <div>
             <div className="navbar bg-base-100 w-11/12 mx-auto">
@@ -22,38 +28,20 @@ const Navber = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2  shadow">
+        {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl"> <img src="https://i.ibb.co.com/64F8GvR/book-stack-3389081-2.png" alt="" />Boi-Poka</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+    <ul className="menu menu-horizontal gap-5  px-1">
+      {links}
     </ul>
   </div>
   <div className="navbar-end gap-4">
-    <a className="btn">Button</a>
-    <a className="btn">Button</a>
+    <a className="btn bg-btn1 text-white font-bold">Sign In</a>
+    <a className="btn bg-btn2 text-white font-bold">Sign Up</a>
   </div>
 </div>
             
