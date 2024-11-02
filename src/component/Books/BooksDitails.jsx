@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import { addtostoreReadlist } from '../../Utility/Addtodb';
 
 
 
@@ -12,11 +13,13 @@ const BooksDitails = () => {
     
     
     const book = data.find(book => book.bookId === id)
-    console.log(book)
+    
 
     
     const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} =book
-
+     const handlereadbtn = (id)=>{
+        addtostoreReadlist(id)
+     }
     
     return (
         <div className='w-11/12 mx-auto'>
