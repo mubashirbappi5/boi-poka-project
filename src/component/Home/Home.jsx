@@ -3,10 +3,11 @@ import Banner from '../banner/Banner';
 import Books from '../Books/Books';
 
 const Home = () => {
+    
     return (
         <div>
             <Banner/>
-            <Books/>
+            <Books />
             
         </div>
     );

@@ -1,15 +1,20 @@
-import React from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
+
 
 
 const BooksDitails = () => {
+    
     const{bookId}= useParams()
     const id = parseInt(bookId)
     const data = useLoaderData()
     
     
+    
     const book = data.find(book => book.bookId === id)
     console.log(book)
+
+    
     const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} =book
 
     
@@ -44,7 +49,7 @@ const BooksDitails = () => {
                         <h3 className='font-bold text-black'>{rating}</h3>
                     </div>
                     <div className='flex gap-10'>
-                    <button className='btn bg-transparent border'>Read</button>
+                    <button onClick={()=>handlereadbtn(bookId)} className='btn bg-transparent border'>Read</button>
                     <button className='btn bg-btn2 text-white'>Wishlist</button>
                 </div>
                     </div>
@@ -52,9 +57,11 @@ const BooksDitails = () => {
                 </div>
                 
                </div>
+           
 
 
             </div>
+           
            
         </div>
     );
