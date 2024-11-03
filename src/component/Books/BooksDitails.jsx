@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
-import { addtostoreReadlist } from '../../Utility/Addtodb';
+import { addtostoreReadlist, addwishlist } from '../../Utility/Addtodb';
+
 
 
 
@@ -19,6 +20,13 @@ const BooksDitails = () => {
     const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} =book
      const handlereadbtn = (id)=>{
         addtostoreReadlist(id)
+        
+     } 
+     const handlewishListbtn = (id)=>{
+        addwishlist(id)
+         
+       
+
      }
     
     return (
@@ -53,7 +61,7 @@ const BooksDitails = () => {
                     </div>
                     <div className='flex gap-10'>
                     <button onClick={()=>handlereadbtn(bookId)} className='btn bg-transparent border'>Read</button>
-                    <button className='btn bg-btn2 text-white'>Wishlist</button>
+                    <button onClick={()=>handlewishListbtn(bookId)} className='btn bg-btn2 text-white'>Wishlist</button>
                 </div>
                     </div>
                    
