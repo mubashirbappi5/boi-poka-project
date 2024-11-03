@@ -11,7 +11,7 @@ const PagestoRead = () => {
 
     return (
         <div className='w-11/12 mx-auto'>
-            <BarChart width={600} height={300} data={data}>
+            <BarChart width={400} height={300} data={data}>
     <XAxis dataKey="bookName" stroke="#8884d8" />
     <YAxis />
     <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />

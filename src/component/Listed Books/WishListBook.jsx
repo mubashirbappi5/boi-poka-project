@@ -9,17 +9,17 @@ const WishListBook = ({wishbook}) => {
     }
     return (
         <div>
-            <div className='flex border rounded-lg mb-6 p-6 gap-7 font-normalfont'>
+            <div className='md:flex border rounded-lg mb-6 p-6 gap-7 font-normalfont'>
             <div className='bg-gray-200 rounded-lg px-10 py-5'>
-                    <img className='h-48' src={image} alt="" />
+                    <img className='h-48 mx-auto' src={image} alt="" />
                 </div>
                 <div className='space-y-4' >
                 <h1 className='font-stylefont font-bold text-3xl'>{bookName}</h1>
                 <h4 className='font-medium'>{author}</h4>
-                <div className='flex gap-6'>
+                <div className='md:flex gap-6'>
                         <h1 className='font-bold'>Tag</h1>
                         {
-                          tags.map((tag,idx) => <h3 key={idx} className='bg-green-100 text-btn1 p-1 rounded-xl'>#{tag}</h3>)  
+                          tags.map((tag,idx) => <h3 key={idx} className='md:bg-green-100 text-btn1 p-1 rounded-xl'>#{tag}</h3>)  
                         }
                         <h4 className='text-[#13131399]'>Year of Publishing: {yearOfPublishing}</h4>
 
